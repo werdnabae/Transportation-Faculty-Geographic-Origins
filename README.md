@@ -12,7 +12,7 @@ Using a harmonized roster of transportation-focused faculty across ranked U.S. u
 
 * The geographic composition of faculty capacity by **undergraduate (UG) country of origin**
 * How upstream geographic sourcing has shifted across **PhD completion cohorts**
-* How undergraduate origins relate to the **prestige tier of first U.S. faculty appointments**
+* How undergraduate origins relate to the **U.S. state location of first faculty appointments**
 
 All results are descriptive and are not interpreted causally.
 
@@ -24,22 +24,30 @@ This repository includes a copy of the faculty dataset used in the analysis. The
 
 A full description of variables, coding conventions, and data construction rules is provided in the companion repository:
 
-[https://github.com/werdnabae/Transportation-Faculty-Hiring-Prestige](https://github.com/werdnabae/Transportation-Faculty-Hiring-Prestige)
+https://github.com/werdnabae/Transportation-Faculty-Hiring-Prestige
 
 Below we summarize only the elements necessary to understand and reproduce the analyses in this project.
 
 **Contents**
 
 * `People`: faculty-level roster and education histories
-* `University Rankings`: institution-level prestige tiers used to classify first-hire outcomes
+* `University Rankings`: institution-level prestige tiers used to classify institutions
 
-**First-hire convention**
+**First-hire convention**  
 If `First_Hire` is missing, the faculty member’s **current institution is treated as their first hire institution**.
 
-**Primary origin measure used in this project**
+**Primary origin measure used in this project**  
 Analyses in this repository use **undergraduate country (`UG_Country`)** to characterize upstream geographic origins. PhD country is retained in the dataset for consistency with related work but is not the primary origin measure analyzed here.
 
 The dataset contains no private or confidential information and is derived entirely from publicly available sources.
+
+### `first_hire_to_state.csv`
+
+This file provides a faculty-level mapping from **first tenure-track hire institution to U.S. state**.
+
+Each row corresponds to an individual faculty member and records the state location of their first hire institution. State assignments are derived from the first-hire institution name in the faculty roster. When first-hire information is missing, the faculty member’s **current institution is used as a proxy**, consistent with the first-hire convention described above.
+
+This file is used to support **state-level aggregation and geographic analyses** of faculty placement patterns.
 
 ## Analysis notebook
 
@@ -51,23 +59,22 @@ The Jupyter notebook reproduces all analyses and figures reported in the associa
 * Geographic origin grouping based on UG country
 * Aggregate composition plots
 * Cohort trend analyses by PhD year
-* Flow (Sankey) visualization from UG origin groups to first-hire prestige tiers
+* Mapping and aggregation of first-hire outcomes by U.S. state
 
-The notebook is intended to run end-to-end using the provided Excel file.
+The notebook is intended to run end to end using the provided data files.
 
 ## Relation to other projects
 
 This repository uses the **same underlying faculty roster and education history coding rules** as the companion project:
 
-[https://github.com/werdnabae/Transportation-Faculty-Hiring-Prestige](https://github.com/werdnabae/Transportation-Faculty-Hiring-Prestige)
+https://github.com/werdnabae/Transportation-Faculty-Hiring-Prestige
 
 The two projects are analytically distinct:
 
 * The **prestige repository** focuses on prestige stratification, placement transitions, and hiring structure
-* The **present repository** focuses on geographic sourcing, cohort change, and capacity resilience
+* The **present repository** focuses on geographic sourcing, cohort change, and state-level placement patterns
 
 Sharing a common dataset ensures consistency across analyses while allowing each project to address a different research question.
-
 
 ## Data sources and limitations
 
@@ -77,11 +84,9 @@ Sharing a common dataset ensures consistency across analyses while allowing each
 
 All results are descriptive summaries of observed patterns.
 
-
 ## Reproducibility
 
-All results in the associated manuscript can be reproduced using the data file and notebook in this repository. No private, proprietary, or confidential data are used.
-
+All results in the associated manuscript can be reproduced using the data files and notebook in this repository. No private, proprietary, or confidential data are used.
 
 ## License
 
