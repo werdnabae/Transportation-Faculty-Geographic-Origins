@@ -1,0 +1,16 @@
+[project]
+name = "transportation-faculty-geographic-origins"
+version = "1.0.0"
+description = "Data and analysis for the paper 'Global Sources of the U.S. Transportation Research Workforce'."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "pandas>=2.0",
+    "numpy>=1.24",
+    "matplotlib>=3.7",
+    "openpyxl>=3.1",
+    "jupyterlab>=4.0",
+]
+
+[tool.uv]
+package = false

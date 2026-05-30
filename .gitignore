@@ -1,0 +1,20 @@
+# Build artifacts (regenerate by running analysis.ipynb)
+*.png
+table_state_first_hire_counts.tex
+
+# uv / virtual environments
+.venv/
+
+# Python
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# OS / editor
+.DS_Store
+
+# Manuscript files are intentionally NOT tracked in this code/data repo
+*.pdf
+*.aux
+*.log
+*.synctex.gz

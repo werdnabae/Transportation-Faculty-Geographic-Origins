@@ -6,6 +6,26 @@ The project examines where faculty capacity is trained and how upstream geograph
 
 The repository is designed to be **fully reproducible on its own**.
 
+## Quickstart (uv)
+
+This project uses [uv](https://docs.astral.sh/uv/) for environment and dependency management.
+
+```bash
+# 1. Install uv (https://docs.astral.sh/uv/getting-started/installation/)
+curl -LsSf https://astral.sh/uv/install.sh | sh
+
+# 2. Create the environment and install dependencies (uv reads pyproject.toml)
+uv sync
+
+# 3. Launch the analysis notebook
+uv run jupyter lab analysis.ipynb
+```
+
+`uv sync` automatically provisions the Python version pinned in `.python-version`
+and installs the dependencies declared in `pyproject.toml`. Running the notebook
+end to end regenerates all figures and the appendix table from the provided data
+files.
+
 ## Project scope and contributions
 
 Using a harmonized roster of transportation-focused faculty across ranked U.S. universities, this project documents:
@@ -33,19 +53,19 @@ Below we summarize only the elements necessary to understand and reproduce the a
 * `People`: faculty-level roster and education histories
 * `University Rankings`: institution-level prestige tiers used to classify institutions
 
-**First-hire convention**  
-If `First_Hire` is missing, the faculty member’s **current institution is treated as their first hire institution**.
+**First tenure-track hire convention**  
+If `First_Hire` is missing, the faculty member’s **current institution is treated as their first tenure-track hire institution**.
 
 **Primary origin measure used in this project**  
 Analyses in this repository use **undergraduate country (`UG_Country`)** to characterize upstream geographic origins. PhD country is retained in the dataset for consistency with related work but is not the primary origin measure analyzed here.
 
 The dataset contains no private or confidential information and is derived entirely from publicly available sources.
 
-### `first_hire_to_state.csv`
+### `first_hire_school_to_state.csv`
 
-This file provides a faculty-level mapping from **first tenure-track hire institution to U.S. state**.
+This file provides an institution-level mapping from **first tenure-track hire institution to U.S. state**.
 
-Each row corresponds to an individual faculty member and records the state location of their first hire institution. State assignments are derived from the first-hire institution name in the faculty roster. When first-hire information is missing, the faculty member’s **current institution is used as a proxy**, consistent with the first-hire convention described above.
+Each row maps an institution name to its U.S. state. State assignments are derived from the first tenure-track hire institution name in the faculty roster. When first tenure-track hire information is missing, the faculty member’s **current institution is used as a proxy**, consistent with the first tenure-track hire convention described above; the analysis notebook applies this fallback before joining to this crosswalk.
 
 This file is used to support **state-level aggregation and geographic analyses** of faculty placement patterns.
 
@@ -59,7 +79,7 @@ The Jupyter notebook reproduces all analyses and figures reported in the associa
 * Geographic origin grouping based on UG country
 * Aggregate composition plots
 * Cohort trend analyses by PhD year
-* Mapping and aggregation of first-hire outcomes by U.S. state
+* Mapping and aggregation of first tenure-track hire outcomes by U.S. state
 
 The notebook is intended to run end to end using the provided data files.
 
