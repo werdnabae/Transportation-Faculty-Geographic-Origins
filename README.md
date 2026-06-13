@@ -1,5 +1,15 @@
 # Geographic Origins of U.S. Transportation Faculty
 
+Code and data for the paper:
+
+**"Global Sources of the U.S. Transportation Research Workforce"**
+
+Andrew J. Bae. *Transportation Research Interdisciplinary Perspectives* **38** (2026) 102096.
+
+[![DOI](https://img.shields.io/badge/DOI-10.1016%2Fj.trip.2026.102096-blue)](https://doi.org/10.1016/j.trip.2026.102096)
+
+**Paper:** <https://www.sciencedirect.com/science/article/pii/S2590198226002617>
+
 This repository contains data and code for a descriptive study of the **geographic sourcing of U.S. transportation faculty** within civil engineering departments.
 
 The project examines where faculty capacity is trained and how upstream geographic origins relate to entry into the U.S. academic labor market. The emphasis is on **descriptive measurement of capacity, pipeline balance, and cohort change**, rather than causal inference.
@@ -107,6 +117,29 @@ All results are descriptive summaries of observed patterns.
 ## Reproducibility
 
 All results in the associated manuscript can be reproduced using the data files and notebook in this repository. No private, proprietary, or confidential data are used.
+
+## Citation
+
+If you use this dataset or code, please cite the paper:
+
+> Bae, A. J. (2026). Global sources of the U.S. transportation research workforce. *Transportation Research Interdisciplinary Perspectives*, 38, 102096. https://doi.org/10.1016/j.trip.2026.102096
+
+BibTeX:
+
+```bibtex
+@article{Bae2026GlobalSources,
+  title     = {Global sources of the U.S. transportation research workforce},
+  author    = {Bae, Andrew J.},
+  journal   = {Transportation Research Interdisciplinary Perspectives},
+  volume    = {38},
+  pages     = {102096},
+  year      = {2026},
+  doi       = {10.1016/j.trip.2026.102096},
+  publisher = {Elsevier},
+}
+```
+
+A machine-readable [`CITATION.cff`](CITATION.cff) is also provided, from which GitHub renders a "Cite this repository" button.
 
 ## License
 

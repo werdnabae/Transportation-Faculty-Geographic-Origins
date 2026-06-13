@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use this dataset or code, please cite the associated paper."
+title: "Geographic Origins of U.S. Transportation Faculty"
+authors:
+  - family-names: Bae
+    given-names: "Andrew J."
+preferred-citation:
+  type: article
+  title: "Global sources of the U.S. transportation research workforce"
+  authors:
+    - family-names: Bae
+      given-names: "Andrew J."
+  journal: "Transportation Research Interdisciplinary Perspectives"
+  volume: 38
+  start: 102096
+  year: 2026
+  doi: "10.1016/j.trip.2026.102096"
+  issn: "2590-1982"
+  publisher:
+    name: "Elsevier"
