@@ -50,13 +50,9 @@ All results are descriptive and are not interpreted causally.
 
 ### `data_transportation_faculty.xlsx`
 
-This repository includes a copy of the faculty dataset used in the analysis. The file is **identical** to the dataset used in the companion repository on transportation faculty hiring and prestige and is duplicated here to support **standalone reproducibility**.
+This repository includes a copy of the faculty dataset used in the analysis, provided here in full to support **standalone reproducibility**.
 
-A full description of variables, coding conventions, and data construction rules is provided in the companion repository:
-
-https://github.com/werdnabae/Transportation-Faculty-Hiring-Prestige
-
-Below we summarize only the elements necessary to understand and reproduce the analyses in this project.
+Below we summarize the elements necessary to understand and reproduce the analyses in this project.
 
 **Contents**
 
@@ -92,19 +88,6 @@ The Jupyter notebook reproduces all analyses and figures reported in the associa
 * Mapping and aggregation of first tenure-track hire outcomes by U.S. state
 
 The notebook is intended to run end to end using the provided data files.
-
-## Relation to other projects
-
-This repository uses the **same underlying faculty roster and education history coding rules** as the companion project:
-
-https://github.com/werdnabae/Transportation-Faculty-Hiring-Prestige
-
-The two projects are analytically distinct:
-
-* The **prestige repository** focuses on prestige stratification, placement transitions, and hiring structure
-* The **present repository** focuses on geographic sourcing, cohort change, and state-level placement patterns
-
-Sharing a common dataset ensures consistency across analyses while allowing each project to address a different research question.
 
 ## Data sources and limitations
 
