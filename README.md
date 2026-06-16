@@ -50,7 +50,7 @@ All results are descriptive and are not interpreted causally.
 
 ### `data_transportation_faculty.xlsx`
 
-This repository includes a copy of the faculty dataset used in the analysis, provided here in full to support **standalone reproducibility**.
+This repository includes a copy of the faculty dataset used in the analysis, provided here in full to support **standalone reproducibility**. The same `data_transportation_faculty.xlsx` dataset is used in the companion repository [Transportation-Faculty-Hiring-Prestige](https://github.com/werdnabae/Transportation-Faculty-Hiring-Prestige), which studies prestige stratification and faculty placement.
 
 Below we summarize the elements necessary to understand and reproduce the analyses in this project.
 
